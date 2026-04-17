@@ -1,65 +1,78 @@
+import Hero from "@/components/Hero";
+import Section from "@/components/Section";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main>
+      {/* HERO */}
+      <Hero
+        title="The Wicked Woods"
+        subtitle="EQUESTRIAN CENTER"
+        image="/images/hero/banner.jpg"
+      />
+
+      {/* STORY SECTION */}
+      <Section>
+        <div className="-mt-10">
+          <div className="grid md:grid-cols-2 gap-10 items-start max-w-6xl mx-auto">
+            {/* LEFT IMAGE */}
+            <div className="relative w-full h-[400px] md:h-[984px]">
+              <Image
+                src="/images/farm/path.jpg"
+                alt="Trail view"
+                fill
+                className="object-cover rounded-[12px]"
+              />
+            </div>
+            {/* RIGHT TEXT */}
+            <div className="leading-relaxed backdrop-blur-md backdrop-saturate-150 bg-white/5 p-8 md:p-10 rounded-xl border border-white/0 shadow-[0_8px_32px_rgba(0,0,0,0.25)]">
+              <h2 className="text-3xl md:text-4xl mb-6">
+                The Wicked Woods Story
+              </h2>
+              <p className="text-gray-200 mb-4">
+                Decades in the making, it has been a dream of our family&apos;s to have
+                our horses at home and to build an educational equestrian program
+                unlike most in the surrounding area. Starting in 2021, with an
+                empty 10 acre plot of land, we have built not only our personal
+                forever home, but the forever home for our horses. After getting
+                all of our must-have facilities in place (horse shelters,
+                pastures, arena, and tack house), and developing a rhythm for farm
+                management, we are finally ready to open our doors to students for
+                riding and horsemanship lessons.
+              </p>
+              <p className="text-gray-200 mb-4">
+                Like any grand adventure, The Wicked Woods dream started long
+                before 2021, a small ember as I rode and showed my horse Dante
+                (under the show name Wicked), and worked on various horse farms
+                around the country, growing into a wildfire. I started riding in
+                1997 and purchased my first horse in 1998 from a woman I still
+                refer to as my second mother. I spent years at the same lesson
+                facility, learning to feed and care for the horses, just as
+                intensely as I learned to ride the horses. That experience
+                instilled a holistic approach to horsemanship that I wish to pass
+                on to future horse-people. As I moved from Colorado to Florida,
+                and then to Ohio, I have taken the opportunity to grow an learn
+                from each person I&apos;ve encountered, good and bad, and have built my
+                dream around the beliefs that have grown from those experiences.
+                Our horses have free access to pasture, hay, and water, twice
+                daily grain, and full turnout with shelter - you won&apos;t find a box
+                stall here. We put in an arena with safe footing that is groomed
+                regularly, and a tack house is available for storage of all the
+                stuff that comes along with horses.
+              </p>
+              <p className="text-gray-200">
+                The Wicked Woods is an inclusive facility that will aid all horse
+                crazy people in finding a way to keep these animals in their
+                lives. We have flexible lesson plans, work exchange, lease
+                options, and community outreach programs to ensure that anyone who
+                wants to learn to ride and care for horses, will be given that
+                opportunity.
+              </p>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </Section>
+    </main>
   );
 }
