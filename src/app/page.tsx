@@ -1,19 +1,21 @@
 import Hero from "@/components/Hero";
-import Section from "@/components/Section";
+import HomeSection from "@/components/HomeSection";
 import Image from "next/image";
+import FadeIn from "@/components/FadeIn";
 
 export default function Home() {
   return (
-    <main>
+    <main className="min-h-screen flex flex-col">
       {/* HERO */}
-      <Hero
-        title="The Wicked Woods"
-        subtitle="EQUESTRIAN CENTER"
-        image="/images/hero/banner.jpg"
-      />
+        <Hero
+          title="The Wicked Woods"
+          subtitle="EQUESTRIAN CENTER"
+          image="/images/hero/banner.jpg"
+        />
 
       {/* STORY SECTION */}
-      <Section>
+      <FadeIn>
+      <HomeSection>
         <div className="-mt-10">
           <div className="grid md:grid-cols-2 gap-10 items-start max-w-6xl mx-auto">
             {/* LEFT IMAGE */}
@@ -72,7 +74,11 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </Section>
+        <div className="mt-auto text-center translate-y-12 text-white/60 text-sm">
+          ©2026 The Wicked Woods. All Rights Reserved.
+        </div>
+      </HomeSection>
+      </FadeIn>
     </main>
   );
 }
