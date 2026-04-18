@@ -19,12 +19,12 @@ export default function Home() {
         <div className="-mt-10">
           <div className="grid md:grid-cols-2 gap-10 items-start max-w-6xl mx-auto">
             {/* LEFT IMAGE */}
-            <div className="relative w-full h-[400px] md:h-[984px]">
+            <div className="relative w-full h-100 md:h-246">
               <Image
                 src="/images/farm/path.jpg"
                 alt="Trail view"
                 fill
-                className="object-cover rounded-[12px]"
+                className="object-cover rounded-xl"
               />
             </div>
             {/* RIGHT TEXT */}

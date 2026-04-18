@@ -13,7 +13,7 @@ export async function POST(req: Request) {
     );
 }
 
-    const data = await resend.emails.send({
+    await resend.emails.send({
       from: "Wicked Woods <onboarding@resend.dev>",
       to: ["kristen.waldron@att.net"],
       subject: `New Contact Form Submission from ${name}`,

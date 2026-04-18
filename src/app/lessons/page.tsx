@@ -17,7 +17,7 @@ export default function Lessons() {
       </div>
 
       {/* DARK OVERLAY (for readability) */}
-      <div className="absolute bottom-0 left-0 w-full h-58 bg-gradient-to-b from-transparent via-black/40 to-black/70 -z-10" />
+      <div className="absolute bottom-0 left-0 w-full h-58 bg-linear-to-b from-transparent via-black/40 to-black/70 -z-10" />
 
       {/* CONTENT */}
       <div className="max-w-6xl mx-auto px-6 pt-28 pb-16 md:pt-32 md:pb-96 grid md:grid-cols-2 gap-12">
