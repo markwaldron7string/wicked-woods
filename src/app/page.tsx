@@ -5,7 +5,7 @@ import FadeIn from "@/components/FadeIn";
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col">
+    <main className="min-h-dvh flex flex-col">
       {/* HERO */}
         <Hero
           title="The Wicked Woods"

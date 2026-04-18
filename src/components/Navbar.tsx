@@ -25,7 +25,7 @@ export default function Navbar() {
     } hover:text-white`;
 
   return (
-    <nav className="absolute top-0 left-0 w-full z-50 flex justify-center items-center px-6 md:px-10 py-0 text-white">
+    <nav className="fixed top-0 left-0 w-full z-50 flex justify-center items-center px-6 md:px-10 py-2 text-white">
       {/* DESKTOP NAV */}
       <div className="space-x-8 text-sm md:text-base hidden md:flex items-center">
         <Link href="/" className={linkClass("/")}>
@@ -57,17 +57,17 @@ export default function Navbar() {
         className="md:hidden cursor-pointer fixed top-4 right-6 z-50 flex flex-col justify-center items-center w-8 h-8"
       >
         <span
-          className={`absolute h-[2px] w-6 bg-white transition-all duration-300 ${
+          className={`absolute h-0.5 w-6 bg-white transition-all duration-300 ${
             open ? "rotate-45" : "-translate-y-2"
           }`}
         />
         <span
-          className={`absolute h-[2px] w-6 bg-white transition-all duration-300 ${
+          className={`absolute h-0.5 w-6 bg-white transition-all duration-300 ${
             open ? "opacity-0" : ""
           }`}
         />
         <span
-          className={`absolute h-[2px] w-6 bg-white transition-all duration-300 ${
+          className={`absolute h-0.5 w-6 bg-white transition-all duration-300 ${
             open ? "-rotate-45" : "translate-y-2"
           }`}
         />
@@ -75,8 +75,8 @@ export default function Navbar() {
 
       {/* MOBILE DROPDOWN */}
       <div
-        className={`absolute top-full right-0 w-full bg-black/80 backdrop-blur-md transition-all duration-500 overflow-hidden ${
-          open ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+        className={`fixed top-0 left-0 w-full bg-black/40 backdrop-blur-sm transition-all duration-300 overflow-hidden ${
+          open ? "max-h-125 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
         <div className="flex flex-col items-center py-6 space-y-4">

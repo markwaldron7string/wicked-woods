@@ -41,7 +41,7 @@ export default function Contact() {
   };
 
   return (
-    <main className="relative min-h-screen text-white">
+    <main className="relative min-h-dvh text-white">
       {/* BACKGROUND */}
       <div className="absolute inset-0 -z-10">
         <Image

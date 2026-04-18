@@ -4,7 +4,7 @@ import FadeIn from "@/components/FadeIn";
 
 export default function Lessons() {
   return (
-    <main className="relative min-h-screen flex items-center justify-center text-white">
+    <main className="relative min-h-dvh flex items-center justify-center text-white">
       {/* BACKGROUND IMAGE */}
       <div className="absolute inset-0 -z-10">
         <Image

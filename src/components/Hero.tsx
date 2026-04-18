@@ -22,7 +22,7 @@ export default function Hero({
   image: string;
 }) {
   return (
-    <div className="relative h-[35vh] md:h-[40vh] w-full overflow-hidden">
+    <div className="relative min-h-[45vh] md:h-[40vh] w-full overflow-hidden">
       {/* IMAGE */}
       <Image
         src={image}
@@ -36,25 +36,25 @@ export default function Hero({
       <div className="absolute inset-0 bg-[#2a1f14]/10" />
 
       {/* TEXT */}
-      <div className="absolute inset-0 cursor-default flex flex-col items-center justify-center text-white text-center px-4 pt-20 md:pt-10 gap-12">
+      <div className="absolute inset-0 cursor-default flex flex-col items-center justify-center text-white text-center px-4 pt-20 gap-12">
         <h1 className={`${amalfi.className} text-5xl md:text-7xl`}>{title}</h1>
 
         {subtitle && (
           <div className="flex items-center justify-center gap-4 mt-4">
-            <div className="h-[1px] w-16 bg-white/60" />
+            <div className="h-px w-16 bg-white/60" />
 
             <p className={`${serif.className} text-[20px] tracking-[0.4em]`}>
               {subtitle}
             </p>
 
-            <div className="h-[1px] w-16 bg-white/60" />
+            <div className="h-px w-16 bg-white/60" />
           </div>
         )}
       </div>
 
       {/* FADE */}
       <div className="absolute bottom-0 left-0 w-full h-40 pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-black/80" />
+        <div className="absolute inset-0 bg-linear-to-b from-transparent via-black/10 to-black/80" />
       </div>
     </div>
   );
