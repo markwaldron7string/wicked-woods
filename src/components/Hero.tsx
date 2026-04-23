@@ -29,7 +29,7 @@ export default function Hero({
         alt={title}
         fill
         priority
-        className="object-cover object-top brightness-105 contrast-105 saturate-100"
+        className="object-cover object-top brightness-95 contrast-85 saturate-100"
       />
 
       {/* DARK OVERLAY */}
@@ -54,7 +54,7 @@ export default function Hero({
 
       {/* FADE */}
       <div className="absolute bottom-0 left-0 w-full h-40 pointer-events-none">
-        <div className="absolute inset-0 bg-linear-to-b from-transparent via-black/10 to-black/80" />
+        <div className="absolute inset-0 bg-linear-to-b from-transparent via-black/10 to-black/90" />
       </div>
     </div>
   );

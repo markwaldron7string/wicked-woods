@@ -10,7 +10,7 @@ export default function Home() {
         <Hero
           title="The Wicked Woods"
           subtitle="EQUESTRIAN CENTER"
-          image="/images/hero/banner.jpg"
+          image="/images/hero/ww-banner.jpg"
         />
 
       {/* STORY SECTION */}
