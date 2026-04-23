@@ -2,7 +2,7 @@ import Image from "next/image";
 import FadeIn from "@/components/FadeIn";
 
 const galleryImages = Array.from(
-  { length: 5 },
+  { length: 7 },
   (_, i) => `/images/gallery/misc${i + 1}.jpg`,
 );
 
