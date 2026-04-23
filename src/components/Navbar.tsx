@@ -25,7 +25,7 @@ export default function Navbar() {
     } hover:text-white`;
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 flex justify-center items-center px-6 md:px-10 py-2 text-white">
+    <nav className="absolute md:absolute top-0 left-0 w-full z-50 flex justify-center items-center px-6 md:px-10 py-2 text-white">
       {/* DESKTOP NAV */}
       <div className="space-x-8 text-sm md:text-base hidden md:flex items-center">
         <Link href="/" className={linkClass("/")}>

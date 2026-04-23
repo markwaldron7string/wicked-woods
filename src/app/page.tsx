@@ -74,7 +74,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="mt-auto text-center translate-y-12 text-white/60 text-sm">
+        <div className="mt-auto text-center translate-y-12 text-white/60 text-sm cursor-default">
           ©2026 The Wicked Woods. All Rights Reserved.
         </div>
       </HomeSection>
