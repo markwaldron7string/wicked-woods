@@ -8,7 +8,7 @@ const farmImages = Array.from(
 
 export default function FarmPage() {
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen bg-black">
       {/* Background */}
       <div
         className="absolute inset-0 bg-cover bg-center opacity-20"
