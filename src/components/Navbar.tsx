@@ -3,21 +3,24 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
+  const isHome = pathname === "/";
+
   const isActive = (path: string) => {
-  const cleanPathname =
-    pathname !== "/" ? pathname.replace(/\/$/, "") : pathname;
+    const cleanPathname =
+      pathname !== "/" ? pathname.replace(/\/$/, "") : pathname;
 
-  if (path === "/") {
-    return cleanPathname === "/";
-  }
+    if (path === "/") {
+      return cleanPathname === "/";
+    }
 
-  return cleanPathname === path;
-};
+    return cleanPathname === path;
+  };
 
   const linkClass = (path: string) =>
     `block py-2 transition-all duration-200 ${
@@ -26,6 +29,34 @@ export default function Navbar() {
 
   return (
     <nav className="absolute md:absolute top-0 left-0 w-full z-50 flex justify-center items-center px-6 md:px-10 py-2 text-white">
+      {/* DESKTOP LOGO (≥1024px) */}
+      <div className="absolute top-6 left-2 z-50 hidden lg:block">
+        <Link href={pathname === "/" ? "/contact" : "/"}>
+          <Image
+            src="/images/logo/whitelogonobg.png"
+            alt="Wicked Woods Equestrian Center"
+            width={280}
+            height={120}
+            priority
+            className="h-20 w-auto"
+          />
+        </Link>
+      </div>
+
+      {/* MOBILE LOGO (<768px) */}
+      <div className="absolute top-6 left-4 z-50 block md:hidden">
+        <Link href={pathname === "/" ? "/contact" : "/"}>
+          <Image
+            src="/images/logo/whitelogonobg.png"
+            alt="Wicked Woods Equestrian Center"
+            width={280}
+            height={120}
+            priority
+            className="h-16 w-auto"
+          />
+        </Link>
+      </div>
+
       {/* DESKTOP NAV */}
       <div className="space-x-8 text-sm md:text-base hidden md:flex items-center">
         <Link href="/" className={linkClass("/")}>
