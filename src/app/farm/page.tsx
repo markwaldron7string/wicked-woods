@@ -12,7 +12,7 @@ export default function FarmPage() {
       {/* Background */}
       <div
         className="absolute inset-0 bg-cover bg-center opacity-20"
-        style={{ backgroundImage: "url('/images/backgrounds/farm-bg.jpg')" }}
+        style={{ backgroundImage: "url('/images/hero/woodsiding.jpg')" }}
       />
 
       {/* Content */}
