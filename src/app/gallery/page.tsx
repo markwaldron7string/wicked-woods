@@ -8,7 +8,7 @@ const galleryImages = Array.from(
 
 export default function GalleryPage() {
   return (
-    <div className="relative min-h-screen bg-black">
+    <div className="relative min-h-screen text-white bg-black">
       {/* Background */}
       <div
         className="absolute inset-0 bg-cover bg-center opacity-20"
