@@ -1,37 +1,110 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🌲 The Wicked Woods — Equestrian Center Website
 
-## Getting Started
+A modern, responsive website built for The Wicked Woods Equestrian Center, designed to showcase lessons, horses, and contact information with a clean, immersive user experience.
 
-First, run the development server:
+✨ Features
+📱 Fully responsive design (mobile-first)
+🎨 Custom hero sections with smooth image fades
+🧊 Glassmorphism UI elements (frosted cards)
+🐎 Dynamic “Meet the Horses” grid layout
+📩 Functional contact form (powered by Resend API)
+🍔 Animated mobile hamburger menu
+🌄 Full-screen background image layouts
+⚡ Optimized performance using Next.js + Image component
+🛠️ Tech Stack
+Framework: Next.js 16 (App Router)
+Styling: Tailwind CSS
+Fonts: Google Fonts + local custom fonts
+Email Service: Resend API
+Deployment: Vercel
+📁 Project Structure
+src/
+├── app/
+│   ├── page.tsx              # Home page
+│   ├── lessons/              # Learning Opportunities page
+│   ├── horses/               # Meet the Horses page
+│   ├── contact/              # Contact page
+│   └── api/contact/route.ts  # Email API route
+│
+├── components/
+│   ├── Navbar.tsx
+│   ├── Hero.tsx
+│   ├── HomeSection.tsx
+│   ├── LessonSection.tsx
+│   └── FadeIn.tsx
+│
+public/
+├── images/
+│   ├── hero/
+│   ├── lessons/
+│   ├── horses/
+│   └── ...
+🚀 Getting Started
+1. Clone the repo
+git clone https://github.com/your-username/wicked-woods.git
+cd wicked-woods
+2. Install dependencies
+npm install
+3. Create environment variables
 
-```bash
+Create a file in the root of your project:
+
+.env.local
+
+Add your Resend API key:
+
+RESEND_API_KEY=re_xxxxxxxxxxxxx
+4. Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+http://localhost:3000
+📩 Contact Form Setup (Resend)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project uses Resend for handling contact form submissions.
 
-## Learn More
+Current Setup (Development)
 
-To learn more about Next.js, take a look at the following resources:
+Uses Resend test domain:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+onboarding@resend.dev
+Sends to a test email (your own)
+Production Setup (Recommended)
+Purchase a domain (e.g. wickedwoods.com)
+Add domain in Resend dashboard
+Configure DNS (DKIM + SPF)
+Update API route:
+from: "Wicked Woods <contact@wickedwoods.com>"
+🎨 Design Notes
+Dark, moody aesthetic with warm tones to match equestrian branding
+Smooth transitions between sections using gradient fades
+Background images used to create immersive sections
+Minimal UI to keep focus on content and imagery
+📱 Responsive Behavior
+Desktop: centered navigation, full layouts
+Tablet: adjusted grid + spacing
+Mobile:
+Hamburger menu
+Collapsible navigation
+Optimized image scaling
+🧠 Future Improvements
+Individual horse profile pages
+Gallery lightbox / modal viewer
+Booking or lesson scheduling system
+CMS integration (for easier content updates)
+Custom email domain setup
+SEO optimization
+🧑‍💻 Author
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Built by Mark Waldron
 
-## Deploy on Vercel
+📄 License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is for a private client (The Wicked Woods Equestrian Center).
+Not intended for public redistribution.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# wicked-woods
+🙌 Acknowledgements
+Images provided by The Wicked Woods
+Additional imagery from free-use sources
+Built with Next.js + Tailwind CSS
