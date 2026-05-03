@@ -10,6 +10,13 @@ const lato = Lato({
 export const metadata = {
   title: "The Wicked Woods",
   description: "Equestrian Center",
+  icons: {
+    icon: [
+      { url: "/images/logo/circlelogo.png", sizes: "32x32", type: "image/png" },
+      { url: "/images/logo/circlelogo.png", sizes: "192x192", type: "image/png" },
+    ],
+    apple: "/images/logo/circlelogo.png",
+  },
 };
 
 export default function RootLayout({
