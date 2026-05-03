@@ -77,13 +77,44 @@ export default function Home() {
                     will be given that opportunity.
                   </p>
                   <p className="mb-4 text-gray-300">
-                    Please see the <Link href="/services"><span className="font-bold hover:text-white transition-colors">Services</span></Link> page for Boarding information, and
-                    Learning Opportunity page for lesson details.
+                    Please see the{" "}
+                    <Link href="/services">
+                      <span className="font-bold hover:text-white transition-colors">
+                        Services
+                      </span>
+                    </Link>{" "}
+                    page for Boarding information, and Learning Opportunity page
+                    for lesson details.
                   </p>
                 </div>
               </div>
             </div>
           </FadeIn>
+        </div>
+        <div className="mt-auto translate-y-16 text-center">
+          {/* CREDIT */}
+          <a
+            href="https://mark-waldron.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-1 opacity-70 hover:opacity-100 transition"
+          >
+            <Image
+              src="/images/logo/MW-Logo.png"
+              alt="Mark Waldron Logo"
+              width={36}
+              height={36}
+              className="object-contain transition duration-300 
+               [filter:drop-shadow(0_0_4px_rgba(255,115,0,0.6))]
+               group-hover:[filter:drop-shadow(0_0_10px_rgba(255,115,0,0.9))]"
+            />
+            <span className="text-sm text-white/70">Site by Mark Waldron</span>
+          </a>
+
+          {/* COPYRIGHT */}
+          <div className="text-white/40 text-sm cursor-default">
+            ©2026 The Wicked Woods. All Rights Reserved.
+          </div>
         </div>
       </HomeSection>
     </main>
