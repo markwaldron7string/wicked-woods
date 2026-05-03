@@ -24,7 +24,7 @@ export default function Home() {
                 {/* IMAGE */}
                 <div className="relative w-full h-72 md:h-[420px] overflow-hidden rounded-md">
                   <Image
-                    src="/images/farm/path.jpg"
+                    src="/images/hero/path.jpg"
                     alt="Trail view"
                     fill
                     className="object-cover transition-transform duration-700 ease-out hover:scale-[1.01]"
