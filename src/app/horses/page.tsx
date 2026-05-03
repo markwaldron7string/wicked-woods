@@ -49,7 +49,7 @@ export default function Horses() {
       </div>
 
       {/* TOP FADE */}
-      <div className="absolute top-0 left-0 w-full h-40 bg-gradient-to-b from-black/70 to-transparent -z-10" />
+      <div className="absolute top-0 left-0 w-full h-40 bg-linear-to-b from-black/70 to-transparent -z-10" />
 
       {/* CONTENT */}
       <div className="max-w-7xl cursor-default mx-auto px-6 md:px-12 pt-32 pb-20">

@@ -21,14 +21,17 @@ export default function Home() {
               {/* LEFT IMAGE */}
               <div className="relative w-full h-100 md:h-246">
                 <Image
-                  src="/images/farm/path.jpg"
+                  src="/images/hero/path.jpg"
                   alt="Trail view"
                   fill
                   className="object-cover rounded-xl"
                 />
               </div>
               {/* RIGHT TEXT */}
-              <div className="leading-relaxed backdrop-blur-md backdrop-saturate-150 bg-white/5 p-8 md:p-10 rounded-xl border border-white/0 shadow-[0_8px_32px_rgba(0,0,0,0.25)]">
+              <div className="leading-relaxed backdrop-blur-md 
+                backdrop-saturate-150 bg-white/5 p-8 md:p-10 
+                rounded-xl border border-white/0 shadow-[0_8px_32px_rgba(0,0,0,0.25)]
+                object-cover cursor-default">
                 <h2 className="text-3xl md:text-4xl mb-6">
                   The Wicked Woods Story
                 </h2>

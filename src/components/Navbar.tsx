@@ -9,7 +9,6 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
-  const isHome = pathname === "/";
 
   const isActive = (path: string) => {
     const cleanPathname =
