@@ -19,7 +19,7 @@ export default function Home() {
         <div className="-mt-10">
           <FadeIn>
             {/* COMBINED CARD */}
-            <div className="backdrop-blur-md bg-black/30 border border-white/10 rounded-xl p-6 md:p-10 shadow-lg shadow-black/30">
+            <div className="backdrop-blur-md bg-black/30 rounded-xl p-6 md:p-10 shadow-lg shadow-black/30">
               <div className="flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-10 items-start md:items-center">
                 {/* IMAGE */}
                 <div className="relative w-full h-72 md:h-[420px] overflow-hidden rounded-md">
@@ -77,7 +77,7 @@ export default function Home() {
                     will be given that opportunity.
                   </p>
                   <p className="mb-4 text-gray-300">
-                    Please see the <Link href="/services"><span className="font-bold">Services</span></Link> page for Boarding information, and
+                    Please see the <Link href="/services"><span className="font-bold hover:text-white transition-colors">Services</span></Link> page for Boarding information, and
                     Learning Opportunity page for lesson details.
                   </p>
                 </div>
