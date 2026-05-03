@@ -36,42 +36,42 @@ export default function Home() {
                   Decades in the making, it has been a dream of our
                   family&apos;s to have our horses at home and to build an
                   educational equestrian program unlike most in the surrounding
-                  area. Starting in 2021, with an empty 10 acre plot of land, we
-                  have built not only our personal forever home, but the forever
-                  home for our horses. After getting all of our must-have
-                  facilities in place (horse shelters, pastures, arena, and tack
-                  house), and developing a rhythm for farm management, we are
-                  finally ready to open our doors to students for riding and
-                  horsemanship lessons.
+                  area. Starting in 2021, with an empty plot of land, we have
+                  built not only our personal forever home, but the forever home
+                  for our horses.
                 </p>
                 <p className="text-gray-200 mb-4">
                   Like any grand adventure, The Wicked Woods dream started long
-                  before 2021, a small ember as I rode and showed my horse Dante
-                  (under the show name Wicked), and worked on various horse
-                  farms around the country, growing into a wildfire. I started
-                  riding in 1997 and purchased my first horse in 1998 from a
-                  woman I still refer to as my second mother. I spent years at
-                  the same lesson facility, learning to feed and care for the
-                  horses, just as intensely as I learned to ride the horses.
-                  That experience instilled a holistic approach to horsemanship
-                  that I wish to pass on to future horse-people. As I moved from
+                  before 2021 - as a small ember - while riding and showing my
+                  horse Dante (under the show name Wicked) and working on
+                  various horse farms around the country - growing into a
+                  wildfire. My name is Kristen and I started riding in 1997.
+                  I have been riding for over two decades and purchased my
+                  first horse in 1998 from a woman I still refer to as my
+                  second mother. I spent years at the same lesson
+                  facility, learning to feed and care for the horses, just as
+                  intensely as I learned to ride the horses. That experience
+                  instilled a holistic approach to horsemanship that I wish to
+                  pass on to future horse-people. After having moved from
                   Colorado to Florida, and then to Ohio, I have taken the
-                  opportunity to grow an learn from each person I&apos;ve
-                  encountered, good and bad, and have built my dream around the
+                  opportunity to grow and learn from each person I&apos;ve
+                  encountered, and have built this dream around the
                   beliefs that have grown from those experiences. Our horses
-                  have free access to pasture, hay, and water, twice daily
-                  grain, and full turnout with shelter - you won&apos;t find a
-                  box stall here. We put in an arena with safe footing that is
-                  groomed regularly, and a tack house is available for storage
-                  of all the stuff that comes along with horses.
+                  have free access to runs off their stalls while inside,
+                  sizable pastures for ample turnout in most weather conditions
+                  - with shelters, free-fed hay, and twice daily grain.
                 </p>
-                <p className="text-gray-200">
+                <p className="text-gray-200 mb-4">
                   The Wicked Woods is an inclusive facility that will aid all
                   horse crazy people in finding a way to keep these animals in
                   their lives. We have flexible lesson plans, work exchange,
                   lease options, and community outreach programs to ensure that
                   anyone who wants to learn to ride and care for horses, will be
                   given that opportunity.
+                </p>
+                <p className="text-gray-200">
+                  Please see the Services page for Boarding information, and
+                  Learning Opportunity page for lesson details.
                 </p>
               </div>
             </div>

@@ -29,7 +29,7 @@ export default function Hero({
         alt={title}
         fill
         priority
-        className="object-cover object-top brightness-95 contrast-85 saturate-100"
+        className="object-cover object-top brightness-65 contrast-85 saturate-100"
       />
 
       {/* DARK OVERLAY */}

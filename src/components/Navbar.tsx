@@ -62,23 +62,23 @@ export default function Navbar() {
         <Link href="/" className={linkClass("/")}>
           Home
         </Link>
+        <Link href="/services" className={linkClass("/services")}>
+          Services
+        </Link>
         <Link href="/contact" className={linkClass("/contact")}>
           Contact
         </Link>
         <Link href="/lessons" className={linkClass("/lessons")}>
           Learning Opportunities
         </Link>
+        <Link href="/facility" className={linkClass("/facility")}>
+          The Facility
+        </Link>
         <Link href="/horses" className={linkClass("/horses")}>
           Meet the Horses
         </Link>
-        <Link href="/farm" className={linkClass("/farm")}>
-          The Farm
-        </Link>
         <Link href="/gallery" className={linkClass("/gallery")}>
           Gallery
-        </Link>
-        <Link href="/artists" className={linkClass("/artists")}>
-          Supporting Local Artists
         </Link>
       </div>
 
@@ -120,6 +120,14 @@ export default function Navbar() {
           </Link>
 
           <Link
+            href="/services"
+            className={linkClass("/services")}
+            onClick={() => setOpen(false)}
+          >
+            Services
+          </Link>
+
+          <Link
             href="/contact"
             className={linkClass("/contact")}
             onClick={() => setOpen(false)}
@@ -136,19 +144,19 @@ export default function Navbar() {
           </Link>
 
           <Link
+            href="/facility"
+            className={linkClass("/facility")}
+            onClick={() => setOpen(false)}
+          >
+            The Facility
+          </Link>
+
+          <Link
             href="/horses"
             className={linkClass("/horses")}
             onClick={() => setOpen(false)}
           >
             Meet the Horses
-          </Link>
-
-          <Link
-            href="/farm"
-            className={linkClass("/farm")}
-            onClick={() => setOpen(false)}
-          >
-            The Farm
           </Link>
 
           <Link
@@ -159,13 +167,6 @@ export default function Navbar() {
             Gallery
           </Link>
 
-          <Link
-            href="/artists"
-            className={linkClass("/artists")}
-            onClick={() => setOpen(false)}
-          >
-            Supporting Local Artists
-          </Link>
         </div>
       </div>
     </nav>

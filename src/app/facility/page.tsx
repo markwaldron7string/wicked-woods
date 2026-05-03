@@ -17,7 +17,7 @@ export default function FarmPage() {
 
       {/* Content */}
       <div className="relative z-10 px-6 py-20 max-w-6xl mx-auto">
-        <h1 className="text-4xl cursor-default font-bold mb-10 text-center">The Farm</h1>
+        <h1 className="text-4xl cursor-default font-bold mb-10 text-center">The Facility</h1>
 
         <div className="masonry">
           {farmImages.map((src, index) => (
