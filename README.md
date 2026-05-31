@@ -1,3 +1,5 @@
+![CI](https://github.com/markwaldron7string/wicked-woods/actions/workflows/ci.yml/badge.svg)
+
 # The Wicked Woods
 
 A responsive website for The Wicked Woods Equestrian Center, built to showcase boarding, lessons, horses, facilities, gallery content, and contact options.
