@@ -1,110 +1,55 @@
-🌲 The Wicked Woods — Equestrian Center Website
+![CI](https://github.com/markwaldron7string/wicked-woods/actions/workflows/ci.yml/badge.svg)
 
-A modern, responsive website built for The Wicked Woods Equestrian Center, designed to showcase lessons, horses, and contact information with a clean, immersive user experience.
+# The Wicked Woods
 
-✨ Features
-📱 Fully responsive design (mobile-first)
-🎨 Custom hero sections with smooth image fades
-🧊 Glassmorphism UI elements (frosted cards)
-🐎 Dynamic “Meet the Horses” grid layout
-📩 Functional contact form (powered by Resend API)
-🍔 Animated mobile hamburger menu
-🌄 Full-screen background image layouts
-⚡ Optimized performance using Next.js + Image component
-🛠️ Tech Stack
-Framework: Next.js 16 (App Router)
-Styling: Tailwind CSS
-Fonts: Google Fonts + local custom fonts
-Email Service: Resend API
-Deployment: Vercel
-📁 Project Structure
-src/
-├── app/
-│   ├── page.tsx              # Home page
-│   ├── lessons/              # Learning Opportunities page
-│   ├── horses/               # Meet the Horses page
-│   ├── contact/              # Contact page
-│   └── api/contact/route.ts  # Email API route
-│
-├── components/
-│   ├── Navbar.tsx
-│   ├── Hero.tsx
-│   ├── HomeSection.tsx
-│   ├── LessonSection.tsx
-│   └── FadeIn.tsx
-│
-public/
-├── images/
-│   ├── hero/
-│   ├── lessons/
-│   ├── horses/
-│   └── ...
-🚀 Getting Started
-1. Clone the repo
-git clone https://github.com/your-username/wicked-woods.git
-cd wicked-woods
-2. Install dependencies
+A responsive website for The Wicked Woods Equestrian Center, built to showcase boarding, lessons, horses, facilities, gallery content, and contact options.
+
+**Live demo:** [wicked-woods.vercel.app](https://wicked-woods.vercel.app)
+
+![The Wicked Woods screenshot](docs/screenshot.png)
+
+## What It Does
+
+The Wicked Woods site gives the equestrian center a complete public-facing web presence:
+
+- Atmospheric homepage with brand hero, story section, and client-oriented copy.
+- Services page for boarding details and additional offerings.
+- Learning opportunities page for lesson information.
+- Meet the Horses page with individual horse profiles.
+- Facility and gallery pages for visual exploration.
+- Contact form that sends inquiries through Resend.
+- Responsive navigation and animated content reveals.
+
+## Tech Stack
+
+- Next.js 16 App Router
+- React 19
+- TypeScript
+- Tailwind CSS v4
+- Framer Motion
+- Resend
+- Next Image optimization
+- Vercel for deployment
+
+## Run Locally
+
+```bash
 npm install
-3. Create environment variables
-
-Create a file in the root of your project:
-
-.env.local
-
-Add your Resend API key:
-
-RESEND_API_KEY=re_xxxxxxxxxxxxx
-4. Run the development server
 npm run dev
+```
 
-Then open:
+Then open [http://localhost:3000](http://localhost:3000).
 
-http://localhost:3000
-📩 Contact Form Setup (Resend)
+## Environment Variables
 
-This project uses Resend for handling contact form submissions.
+The contact form requires:
 
-Current Setup (Development)
+- `RESEND_API_KEY`
 
-Uses Resend test domain:
+## Project Status
 
-onboarding@resend.dev
-Sends to a test email (your own)
-Production Setup (Recommended)
-Purchase a domain (e.g. wickedwoods.com)
-Add domain in Resend dashboard
-Configure DNS (DKIM + SPF)
-Update API route:
-from: "Wicked Woods <contact@wickedwoods.com>"
-🎨 Design Notes
-Dark, moody aesthetic with warm tones to match equestrian branding
-Smooth transitions between sections using gradient fades
-Background images used to create immersive sections
-Minimal UI to keep focus on content and imagery
-📱 Responsive Behavior
-Desktop: centered navigation, full layouts
-Tablet: adjusted grid + spacing
-Mobile:
-Hamburger menu
-Collapsible navigation
-Optimized image scaling
-🧠 Future Improvements
-Individual horse profile pages
-Gallery lightbox / modal viewer
-Booking or lesson scheduling system
-CMS integration (for easier content updates)
-Custom email domain setup
-SEO optimization
-🧑‍💻 Author
+This is a production-style client website with the core marketing and inquiry flows in place. Future improvements could include booking requests, a CMS for gallery updates, and expanded horse profile pages.
 
-Built by Mark Waldron
+## License
 
-📄 License
-
-This project is for a private client (The Wicked Woods Equestrian Center).
-Not intended for public redistribution.
-
-🙌 Acknowledgements
-Images provided by The Wicked Woods
-Additional imagery from free-use sources
-Built with Next.js + Tailwind CSS
+Private client project for The Wicked Woods Equestrian Center. Not intended for public redistribution.
