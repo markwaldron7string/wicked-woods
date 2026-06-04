@@ -8,6 +8,7 @@ A responsive website for The Wicked Woods Equestrian Center, built to showcase b
 
 ![The Wicked Woods screenshot](docs/screenshot.png)
 
+
 ## What It Does
 
 The Wicked Woods site gives the equestrian center a complete public-facing web presence:
@@ -20,6 +21,7 @@ The Wicked Woods site gives the equestrian center a complete public-facing web p
 - Contact form that sends inquiries through Resend.
 - Responsive navigation and animated content reveals.
 
+
 ## Tech Stack
 
 - Next.js 16 App Router
@@ -31,6 +33,13 @@ The Wicked Woods site gives the equestrian center a complete public-facing web p
 - Next Image optimization
 - Vercel for deployment
 
+
+## CI/CD
+
+- **CI** — GitHub Actions runs the Jest suite on every push and pull request (see the badge above).
+- **CD** — Deployment is handled automatically by Vercel, which builds and ships every push to `main`.
+
+
 ## Run Locally
 
 ```bash
@@ -40,15 +49,18 @@ npm run dev
 
 Then open [http://localhost:3000](http://localhost:3000).
 
+
 ## Environment Variables
 
 The contact form requires:
 
 - `RESEND_API_KEY`
 
+
 ## Project Status
 
 This is a production-style client website with the core marketing and inquiry flows in place. Future improvements could include booking requests, a CMS for gallery updates, and expanded horse profile pages.
+
 
 ## License
 
