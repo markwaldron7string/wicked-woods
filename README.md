@@ -1,4 +1,5 @@
 ![CI](https://github.com/markwaldron7string/wicked-woods/actions/workflows/ci.yml/badge.svg)
+![E2E](https://github.com/markwaldron7string/wicked-woods/actions/workflows/cypress.yml/badge.svg)
 
 # The Wicked Woods
 
