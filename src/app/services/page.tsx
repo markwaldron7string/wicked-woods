@@ -1,41 +1,36 @@
 import FadeIn from "@/components/FadeIn";
 import Link from "next/link";
+import WoodBackground from "@/components/WoodBackground";
+import PageHeader from "@/components/PageHeader";
+import SiteFooter from "@/components/SiteFooter";
 
 export default function Page() {
   return (
-    <div className="relative min-h-screen text-white">
-      {/* BACKGROUND */}
-      <div
-        className="absolute inset-0 bg-cover bg-center brightness-60"
-        style={{ backgroundImage: "url('/images/hero/woodsiding.jpg')" }}
-      />
+    <main className="relative min-h-dvh text-white">
+      <WoodBackground opacity="medium" />
 
-      {/* CONTENT */}
-      <div className="relative z-10 px-6 py-24 max-w-5xl mx-auto cursor-default">
-        {/* TITLE */}
-        <h1 className="text-4xl md:text-5xl font-semibold text-center mb-12">
-          Services
-        </h1>
+      <div className="relative z-10 px-6 pt-32 pb-12 max-w-5xl mx-auto cursor-default">
+        <PageHeader
+          title="Services"
+          subtitle="Full-care boarding in a thoughtfully managed, family-run equestrian center."
+        />
 
-        {/* MAIN CARD */}
-        <FadeIn>
-          <div className="backdrop-blur-md bg-black/30 border border-white/10 rounded-xl p-8 md:p-12 space-y-10">
-            {/* INTRO */}
+        <FadeIn delay={0.15}>
+          <div className="backdrop-blur-md bg-black/30 border border-white/10 rounded-2xl p-8 md:p-12 space-y-10">
             <p className="text-white/80 leading-relaxed text-center max-w-3xl mx-auto">
-              The Wicked Woods is a full care boarding facility ideal for multiple
-              disciplines, retirees and semi-retirees, casual riders, and the
-              occasional competitor. Our arena has excellent footing, is well
-              maintained, and regularly assessed for drainage and stability. It
-              will be under lights in 2026, extending evening ride times
-              throughout the year.
+              The Wicked Woods is a full care boarding facility ideal for
+              multiple disciplines, retirees and semi-retirees, casual riders,
+              and the occasional competitor. Our arena has excellent footing,
+              is well maintained, and regularly assessed for drainage and
+              stability. It will be under lights in 2026, extending evening
+              ride times throughout the year.
             </p>
-            {/* WHAT'S INCLUDED */}
+
             <div>
-              <h2 className="text-2xl mb-6 lg:text-center">
+              <h2 className="text-2xl mb-6 font-light lg:text-center">
                 Your monthly board will include:
               </h2>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-6 text-white/80 text-sm leading-relaxed">
-                {/* LEFT COLUMN */}
                 <ul className="space-y-4 list-disc list-outside pl-5">
                   <li>
                     Customized feed plan to include:
@@ -66,7 +61,7 @@ export default function Page() {
                     well as holidays
                   </li>
                 </ul>
-                {/* RIGHT COLUMN */}
+
                 <ul className="space-y-4 list-disc list-inside">
                   <li>Hot/cold wash rack</li>
                   <li>Tack locker with 2 saddle and bridle racks</li>
@@ -81,9 +76,11 @@ export default function Page() {
                 </ul>
               </div>
             </div>
-            {/* ADDITIONAL SERVICES */}
+
             <div>
-              <h2 className="text-2xl mb-8 text-center">Additional Services</h2>
+              <h2 className="text-2xl mb-8 font-light text-center">
+                Additional Services
+              </h2>
               <div className="max-w-xl mx-auto space-y-6 text-white/80 text-sm text-center">
                 <div>
                   <p className="font-medium text-white mb-1">Riding Lessons</p>
@@ -113,7 +110,9 @@ export default function Page() {
             </div>
           </div>
         </FadeIn>
+
+        <SiteFooter />
       </div>
-    </div>
+    </main>
   );
 }

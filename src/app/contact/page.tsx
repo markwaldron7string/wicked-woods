@@ -1,8 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import FadeIn from "@/components/FadeIn";
+import FixedImageBackground from "@/components/FixedImageBackground";
+import PageHeader from "@/components/PageHeader";
+import GlassCard from "@/components/GlassCard";
+import SiteFooter from "@/components/SiteFooter";
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -42,27 +45,21 @@ export default function Contact() {
 
   return (
     <main className="relative min-h-dvh text-white">
-      {/* BACKGROUND */}
-      <div className="absolute inset-0 -z-10">
-        <Image
-          src="/images/lessons/lessongear.jpg"
-          alt="Contact background"
-          fill
-          className="object-cover object-left"
+      <FixedImageBackground
+        src="/images/lessons/lessongear.jpg"
+        alt="Contact background"
+        objectPosition="object-left"
+      />
+
+      <div className="max-w-2xl mx-auto px-6 pt-32 pb-12">
+        <PageHeader
+          title="Contact Us"
+          subtitle="Questions about lessons, boarding, or visiting the farm? We'd love to hear from you."
         />
-        <div className="absolute inset-0 bg-black/60" />
-      </div>
 
-      {/* CONTENT */}
-      <FadeIn>
-        <div className="max-w-2xl mx-auto px-6 pt-32 pb-20">
-          <div className="backdrop-blur-md bg-white/10 border border-white/20 rounded-2xl p-8 md:p-10 shadow-xl">
-            <h1 className="text-4xl md:text-5xl mb-6 font-light text-center">
-              Contact Us
-            </h1>
-
+        <FadeIn delay={0.15}>
+          <GlassCard className="p-8 md:p-10">
             <form onSubmit={handleSubmit} className="space-y-6">
-              {/* NAME */}
               <input
                 type="text"
                 name="name"
@@ -73,7 +70,6 @@ export default function Contact() {
                 className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/40"
               />
 
-              {/* EMAIL */}
               <input
                 type="email"
                 name="email"
@@ -84,7 +80,6 @@ export default function Contact() {
                 className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/40"
               />
 
-              {/* MESSAGE */}
               <textarea
                 name="message"
                 placeholder="Your Message"
@@ -92,10 +87,9 @@ export default function Contact() {
                 onChange={handleChange}
                 required
                 rows={5}
-                className="w-full px-4 py-3 pb-28 rounded-lg bg-white/10 border border-white/20 placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/40 resize-none"
+                className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/40 resize-none"
               />
 
-              {/* BUTTON */}
               <button
                 type="submit"
                 className="w-full cursor-pointer py-3 rounded-lg bg-white/20 hover:bg-white/30 transition-all duration-300 font-medium"
@@ -107,9 +101,11 @@ export default function Contact() {
                 <p className="text-center text-white/80 mt-4">{status}</p>
               )}
             </form>
-          </div>
-        </div>
-      </FadeIn>
+          </GlassCard>
+        </FadeIn>
+
+        <SiteFooter />
+      </div>
     </main>
   );
 }

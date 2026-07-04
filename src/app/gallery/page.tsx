@@ -4,10 +4,13 @@ import { useState } from "react";
 import Image from "next/image";
 import FadeIn from "@/components/FadeIn";
 import Lightbox from "@/components/Lightbox";
+import WoodBackground from "@/components/WoodBackground";
+import PageHeader from "@/components/PageHeader";
+import SiteFooter from "@/components/SiteFooter";
 
 const galleryImages = Array.from(
   { length: 19 },
-  (_, i) => `/images/gallery/misc${i + 1}.jpg`
+  (_, i) => `/images/gallery/misc${i + 1}.jpg`,
 );
 
 export default function GalleryPage() {
@@ -15,34 +18,26 @@ export default function GalleryPage() {
 
   const next = () =>
     setActiveIndex((prev) =>
-      prev === null ? 0 : (prev + 1) % galleryImages.length
+      prev === null ? 0 : (prev + 1) % galleryImages.length,
     );
 
   const prev = () =>
     setActiveIndex((prev) =>
       prev === null
         ? 0
-        : (prev - 1 + galleryImages.length) % galleryImages.length
+        : (prev - 1 + galleryImages.length) % galleryImages.length,
     );
 
   return (
-    <div className="relative min-h-screen text-white bg-black">
-      
-      {/* BACKGROUND */}
-      <div
-        className="absolute inset-0 bg-cover bg-center opacity-20"
-        style={{ backgroundImage: "url('/images/hero/woodsiding.jpg')" }}
-      />
+    <main className="relative min-h-dvh text-white">
+      <WoodBackground opacity="subtle" />
 
-      {/* CONTENT */}
-      <div className="relative z-10 px-6 py-20 max-w-6xl mx-auto cursor-default">
-        
-        {/* TITLE */}
-        <h1 className="text-4xl font-bold mb-10 text-center">
-          Gallery
-        </h1>
+      <div className="relative z-10 px-6 pt-32 pb-12 max-w-6xl mx-auto cursor-default">
+        <PageHeader
+          title="Gallery"
+          subtitle="A glimpse of life at The Wicked Woods."
+        />
 
-        {/* MASONRY GRID */}
         <div className="masonry">
           {galleryImages.map((src, index) => (
             <div key={index} className="masonry-item">
@@ -59,9 +54,10 @@ export default function GalleryPage() {
             </div>
           ))}
         </div>
+
+        <SiteFooter />
       </div>
 
-      {/* LIGHTBOX */}
       {activeIndex !== null && (
         <Lightbox
           images={galleryImages}
@@ -71,6 +67,6 @@ export default function GalleryPage() {
           onPrev={prev}
         />
       )}
-    </div>
+    </main>
   );
 }

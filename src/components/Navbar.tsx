@@ -21,10 +21,14 @@ export default function Navbar() {
     return cleanPathname === path;
   };
 
-  const linkClass = (path: string) =>
-    `block py-2 transition-all duration-200 ${
-      isActive(path) ? "text-white font-semibold" : "text-white/80"
-    } hover:text-white`;
+  const linkClass = (path: string) => {
+    const active = isActive(path);
+    return `py-2 transition-all duration-200 hover:text-white ${
+      active
+        ? "text-white font-medium underline underline-offset-[6px] decoration-white/60"
+        : "text-white/75"
+    }`;
+  };
 
   return (
     <nav className="absolute md:absolute top-0 left-0 w-full z-50 flex justify-center items-center px-6 md:px-10 py-2 text-white">
@@ -57,7 +61,7 @@ export default function Navbar() {
       </div>
 
       {/* DESKTOP NAV */}
-      <div className="space-x-8 text-sm md:text-base hidden md:flex items-center">
+      <div className="space-x-8 text-sm tracking-wide hidden md:flex items-center">
         <Link href="/" className={linkClass("/")}>
           Home
         </Link>
@@ -110,59 +114,31 @@ export default function Navbar() {
         }`}
       >
         <div className="flex flex-col items-center py-6 space-y-4">
-          <Link
-            href="/"
-            className={linkClass("/")}
-            onClick={() => setOpen(false)}
-          >
+          <Link href="/" className={`block ${linkClass("/")}`} onClick={() => setOpen(false)}>
             Home
           </Link>
 
-          <Link
-            href="/services"
-            className={linkClass("/services")}
-            onClick={() => setOpen(false)}
-          >
+          <Link href="/services" className={`block ${linkClass("/services")}`} onClick={() => setOpen(false)}>
             Services
           </Link>
 
-          <Link
-            href="/contact"
-            className={linkClass("/contact")}
-            onClick={() => setOpen(false)}
-          >
+          <Link href="/contact" className={`block ${linkClass("/contact")}`} onClick={() => setOpen(false)}>
             Contact
           </Link>
 
-          <Link
-            href="/lessons"
-            className={linkClass("/lessons")}
-            onClick={() => setOpen(false)}
-          >
+          <Link href="/lessons" className={`block ${linkClass("/lessons")}`} onClick={() => setOpen(false)}>
             Learning Opportunities
           </Link>
 
-          <Link
-            href="/facility"
-            className={linkClass("/facility")}
-            onClick={() => setOpen(false)}
-          >
+          <Link href="/facility" className={`block ${linkClass("/facility")}`} onClick={() => setOpen(false)}>
             The Facility
           </Link>
 
-          <Link
-            href="/horses"
-            className={linkClass("/horses")}
-            onClick={() => setOpen(false)}
-          >
+          <Link href="/horses" className={`block ${linkClass("/horses")}`} onClick={() => setOpen(false)}>
             Meet the Horses
           </Link>
 
-          <Link
-            href="/gallery"
-            className={linkClass("/gallery")}
-            onClick={() => setOpen(false)}
-          >
+          <Link href="/gallery" className={`block ${linkClass("/gallery")}`} onClick={() => setOpen(false)}>
             Gallery
           </Link>
 
