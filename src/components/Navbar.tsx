@@ -30,34 +30,44 @@ export default function Navbar() {
     }`;
   };
 
+  const logoHref = pathname === "/" ? "/contact" : "/";
+
+  const LogoLink = ({
+    circleClassName,
+    imageClassName,
+  }: {
+    circleClassName: string;
+    imageClassName: string;
+  }) => (
+    <Link
+      href={logoHref}
+      className="relative inline-flex items-center justify-center"
+    >
+      <span
+        className={`absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-black ${circleClassName}`}
+        aria-hidden="true"
+      />
+      <Image
+        src="/images/logo/whitelogonobg.png"
+        alt="Wicked Woods Equestrian Center"
+        width={280}
+        height={120}
+        priority
+        className={`relative z-10 ${imageClassName}`}
+      />
+    </Link>
+  );
+
   return (
     <nav className="absolute md:absolute top-0 left-0 w-full z-50 flex justify-center items-center px-6 md:px-10 py-2 text-white">
       {/* DESKTOP LOGO (≥1024px) */}
       <div className="absolute top-6 left-2 z-50 hidden lg:block">
-        <Link href={pathname === "/" ? "/contact" : "/"}>
-          <Image
-            src="/images/logo/whitelogonobg.png"
-            alt="Wicked Woods Equestrian Center"
-            width={280}
-            height={120}
-            priority
-            className="h-20 w-auto"
-          />
-        </Link>
+        <LogoLink circleClassName="size-24" imageClassName="h-20 w-auto" />
       </div>
 
       {/* MOBILE LOGO (<768px) */}
       <div className="absolute top-6 left-4 z-50 block md:hidden">
-        <Link href={pathname === "/" ? "/contact" : "/"}>
-          <Image
-            src="/images/logo/whitelogonobg.png"
-            alt="Wicked Woods Equestrian Center"
-            width={280}
-            height={120}
-            priority
-            className="h-16 w-auto"
-          />
-        </Link>
+        <LogoLink circleClassName="size-20" imageClassName="h-16 w-auto" />
       </div>
 
       {/* DESKTOP NAV */}
