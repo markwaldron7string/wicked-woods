@@ -13,6 +13,7 @@ export default function Contact() {
     email: "",
     message: "",
   });
+  const [website, setWebsite] = useState("");
 
   const [status, setStatus] = useState("");
 
@@ -30,7 +31,7 @@ export default function Contact() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(form),
+      body: JSON.stringify({ ...form, website }),
     });
 
     const data = await res.json();
@@ -38,6 +39,9 @@ export default function Contact() {
     if (data.success) {
       setStatus("Message sent!");
       setForm({ name: "", email: "", message: "" });
+      setWebsite("");
+    } else if (res.status === 429) {
+      setStatus("Too many messages sent recently. Please try again later.");
     } else {
       setStatus("Something went wrong.");
     }
@@ -54,24 +58,30 @@ export default function Contact() {
       <div className="max-w-2xl mx-auto px-6 pt-32 pb-12">
         <PageHeader
           title="Contact Us"
-          subtitle="Questions about lessons, boarding, or visiting the farm? We'd love to hear from you."
+          subtitle="Questions about lessons, boarding, or visiting the farm? Send us a message below."
         />
 
         <FadeIn delay={0.15}>
           <GlassCard className="p-8 md:p-10">
             <div className="mb-8 pb-8 border-b border-white/15 text-center space-y-2">
-              <p className="text-white/90">
-                Louisville, Ohio — by appointment
+              <p className="text-white/90">Louisville, Ohio — by appointment</p>
+              <p className="text-white/60 text-sm">
+                We respond to messages within a few days.
               </p>
-              <a
-                href="mailto:kristen.waldron@att.net"
-                className="inline-block text-white/80 hover:text-white transition-colors underline underline-offset-4"
-              >
-                kristen.waldron@att.net
-              </a>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-6">
+              <input
+                type="text"
+                name="website"
+                value={website}
+                onChange={(e) => setWebsite(e.target.value)}
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+                className="absolute left-[-9999px] h-0 w-0 opacity-0 pointer-events-none"
+              />
+
               <input
                 type="text"
                 name="name"
