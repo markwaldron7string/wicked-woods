@@ -59,6 +59,18 @@ export default function Contact() {
 
         <FadeIn delay={0.15}>
           <GlassCard className="p-8 md:p-10">
+            <div className="mb-8 pb-8 border-b border-white/15 text-center space-y-2">
+              <p className="text-white/90">
+                Louisville, Ohio — by appointment
+              </p>
+              <a
+                href="mailto:kristen.waldron@att.net"
+                className="inline-block text-white/80 hover:text-white transition-colors underline underline-offset-4"
+              >
+                kristen.waldron@att.net
+              </a>
+            </div>
+
             <form onSubmit={handleSubmit} className="space-y-6">
               <input
                 type="text"

@@ -22,13 +22,17 @@ export default function Page() {
               multiple disciplines, retirees and semi-retirees, casual riders,
               and the occasional competitor. Our arena has excellent footing,
               is well maintained, and regularly assessed for drainage and
-              stability. It will be under lights in 2026, extending evening
-              ride times throughout the year.
+              stability.
             </p>
+
+            <div className="text-center">
+              <p className="text-2xl font-light text-white">$600</p>
+              <p className="text-white/70 mt-1">per month, full board</p>
+            </div>
 
             <div>
               <h2 className="text-2xl mb-6 font-light lg:text-center">
-                Your monthly board will include:
+                Your monthly board includes:
               </h2>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-6 text-white/80 text-sm leading-relaxed">
                 <ul className="space-y-4 list-disc list-outside pl-5">
@@ -65,7 +69,7 @@ export default function Page() {
                 <ul className="space-y-4 list-disc list-inside">
                   <li>Hot/cold wash rack</li>
                   <li>Tack locker with 2 saddle and bridle racks</li>
-                  <li>80x160 lit arena</li>
+                  <li>80x160 outdoor arena</li>
                   <li>Blanketing with blanket changes</li>
                   <li>Fly spray, masks, boots, sheets put on before turnout</li>
                   <li>Access to small trail system on property</li>
