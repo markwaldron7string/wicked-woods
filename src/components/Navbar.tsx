@@ -65,8 +65,8 @@ export default function Navbar() {
         <LogoLink circleClassName="size-24" imageClassName="h-20 w-auto" />
       </div>
 
-      {/* MOBILE LOGO (<768px) */}
-      <div className="absolute top-6 left-4 z-50 block md:hidden">
+      {/* MOBILE / TABLET LOGO (<1024px) */}
+      <div className="absolute top-6 left-4 z-50 block lg:hidden">
         <LogoLink circleClassName="size-20" imageClassName="h-16 w-auto" />
       </div>
 
