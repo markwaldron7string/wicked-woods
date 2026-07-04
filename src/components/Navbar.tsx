@@ -1,14 +1,38 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Image from "next/image";
+import NavLogo, {
+  DEFAULT_LOGO_STYLE,
+  LOGO_STYLE_EVENT,
+  LOGO_STYLE_STORAGE_KEY,
+  type LogoStyle,
+} from "@/components/NavLogo";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [logoStyle, setLogoStyle] = useState<LogoStyle>(DEFAULT_LOGO_STYLE);
   const pathname = usePathname();
 
+  useEffect(() => {
+    const saved = localStorage.getItem(
+      LOGO_STYLE_STORAGE_KEY,
+    ) as LogoStyle | null;
+    if (saved) {
+      setLogoStyle(saved);
+    }
+
+    const handleStyleChange = (event: Event) => {
+      const customEvent = event as CustomEvent<LogoStyle>;
+      if (customEvent.detail) {
+        setLogoStyle(customEvent.detail);
+      }
+    };
+
+    window.addEventListener(LOGO_STYLE_EVENT, handleStyleChange);
+    return () => window.removeEventListener(LOGO_STYLE_EVENT, handleStyleChange);
+  }, []);
 
   const isActive = (path: string) => {
     const cleanPathname =
@@ -32,42 +56,16 @@ export default function Navbar() {
 
   const logoHref = pathname === "/" ? "/contact" : "/";
 
-  const LogoLink = ({
-    circleClassName,
-    imageClassName,
-  }: {
-    circleClassName: string;
-    imageClassName: string;
-  }) => (
-    <Link
-      href={logoHref}
-      className="relative inline-flex items-center justify-center"
-    >
-      <span
-        className={`absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-black ${circleClassName}`}
-        aria-hidden="true"
-      />
-      <Image
-        src="/images/logo/whitelogonobg.png"
-        alt="Wicked Woods Equestrian Center"
-        width={280}
-        height={120}
-        priority
-        className={`relative z-10 ${imageClassName}`}
-      />
-    </Link>
-  );
-
   return (
     <nav className="absolute md:absolute top-0 left-0 w-full z-50 flex justify-center items-center px-6 md:px-10 py-2 text-white">
       {/* DESKTOP LOGO (≥1024px) */}
       <div className="absolute top-6 left-2 z-50 hidden lg:block">
-        <LogoLink circleClassName="size-24" imageClassName="h-20 w-auto" />
+        <NavLogo href={logoHref} style={logoStyle} size="lg" />
       </div>
 
       {/* MOBILE / TABLET LOGO (<1024px) */}
       <div className="absolute top-6 left-4 z-50 block lg:hidden">
-        <LogoLink circleClassName="size-20" imageClassName="h-16 w-auto" />
+        <NavLogo href={logoHref} style={logoStyle} size="sm" />
       </div>
 
       {/* DESKTOP NAV */}
