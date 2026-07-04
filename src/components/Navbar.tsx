@@ -1,38 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import NavLogo, {
-  DEFAULT_LOGO_STYLE,
-  LOGO_STYLE_EVENT,
-  LOGO_STYLE_STORAGE_KEY,
-  type LogoStyle,
-} from "@/components/NavLogo";
+import NavLogo from "@/components/NavLogo";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const [logoStyle, setLogoStyle] = useState<LogoStyle>(DEFAULT_LOGO_STYLE);
   const pathname = usePathname();
-
-  useEffect(() => {
-    const saved = localStorage.getItem(
-      LOGO_STYLE_STORAGE_KEY,
-    ) as LogoStyle | null;
-    if (saved) {
-      setLogoStyle(saved);
-    }
-
-    const handleStyleChange = (event: Event) => {
-      const customEvent = event as CustomEvent<LogoStyle>;
-      if (customEvent.detail) {
-        setLogoStyle(customEvent.detail);
-      }
-    };
-
-    window.addEventListener(LOGO_STYLE_EVENT, handleStyleChange);
-    return () => window.removeEventListener(LOGO_STYLE_EVENT, handleStyleChange);
-  }, []);
 
   const isActive = (path: string) => {
     const cleanPathname =
@@ -60,12 +35,12 @@ export default function Navbar() {
     <nav className="absolute md:absolute top-0 left-0 w-full z-50 flex justify-center items-center px-6 md:px-10 py-2 text-white">
       {/* DESKTOP LOGO (≥1024px) */}
       <div className="absolute top-6 left-2 z-50 hidden lg:block">
-        <NavLogo href={logoHref} style={logoStyle} size="lg" />
+        <NavLogo href={logoHref} size="lg" />
       </div>
 
       {/* MOBILE / TABLET LOGO (<1024px) */}
       <div className="absolute top-6 left-4 z-50 block lg:hidden">
-        <NavLogo href={logoHref} style={logoStyle} size="sm" />
+        <NavLogo href={logoHref} size="sm" />
       </div>
 
       {/* DESKTOP NAV */}
