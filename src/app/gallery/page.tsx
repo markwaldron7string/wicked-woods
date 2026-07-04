@@ -32,7 +32,7 @@ export default function GalleryPage() {
     <main className="relative min-h-dvh text-white">
       <WoodBackground opacity="subtle" />
 
-      <div className="relative z-10 px-6 pt-32 pb-12 max-w-6xl mx-auto cursor-default">
+      <div className="relative z-10 px-6 pt-32 pb-12 max-w-6xl mx-auto">
         <PageHeader
           title="Gallery"
           subtitle="A glimpse of life at The Wicked Woods."

@@ -35,7 +35,7 @@ export default function Facility() {
     <main className="relative min-h-dvh text-white">
       <WoodBackground opacity="medium" />
 
-      <div className="relative z-10 px-6 pt-32 pb-12 max-w-6xl mx-auto cursor-default">
+      <div className="relative z-10 px-6 pt-32 pb-12 max-w-6xl mx-auto">
         <PageHeader
           title="The Facility"
           subtitle="Nearly 11 acres of pasture, forest, and thoughtfully designed barn facilities in Louisville, Ohio."

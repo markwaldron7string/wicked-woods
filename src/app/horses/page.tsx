@@ -50,7 +50,7 @@ export default function Horses() {
 
       <div className="absolute top-0 left-0 w-full h-40 bg-linear-to-b from-black/70 to-transparent z-0 pointer-events-none" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 pt-32 pb-12 cursor-default">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 pt-32 pb-12">
         <PageHeader
           title="Meet the Horses"
           subtitle="The heart of our program — each with their own personality and purpose."

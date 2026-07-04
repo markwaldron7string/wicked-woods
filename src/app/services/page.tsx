@@ -9,7 +9,7 @@ export default function Page() {
     <main className="relative min-h-dvh text-white">
       <WoodBackground opacity="medium" />
 
-      <div className="relative z-10 px-6 pt-32 pb-12 max-w-5xl mx-auto cursor-default">
+      <div className="relative z-10 px-6 pt-32 pb-12 max-w-5xl mx-auto">
         <PageHeader
           title="Services"
           subtitle="Full-care boarding in a thoughtfully managed, family-run equestrian center."

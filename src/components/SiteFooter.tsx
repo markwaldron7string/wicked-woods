@@ -20,7 +20,7 @@ export default function SiteFooter() {
           Site by Mark Waldron
         </span>
       </a>
-      <div className="text-white/40 text-sm mt-3 cursor-default">
+      <div className="text-white/40 text-sm mt-3">
         ©2026 The Wicked Woods. All Rights Reserved.
       </div>
     </footer>

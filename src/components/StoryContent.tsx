@@ -7,7 +7,7 @@ export default function StoryContent() {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <div className="leading-relaxed text-white/80 cursor-default">
+    <div className="leading-relaxed text-white/80">
       <h2 className="text-3xl md:text-4xl mb-6 text-gray-300">
         The Wicked Woods Story
       </h2>
