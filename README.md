@@ -18,7 +18,8 @@ A responsive website for The Wicked Woods Equestrian Center, built to showcase b
 
 The Wicked Woods site gives the equestrian center a complete public-facing web presence:
 
-- Atmospheric homepage with brand hero, story section, and client-oriented copy.
+- Cinematic intro animation with an "Enter Site" reveal, leading into a wood-textured home hub with quick links to every section.
+- Dedicated Our Story page sharing the family's background and mission.
 - Services page for boarding details and additional offerings.
 - Learning opportunities page for lesson information.
 - Meet the Horses page with individual horse profiles.
@@ -41,7 +42,8 @@ The Wicked Woods site gives the equestrian center a complete public-facing web p
 
 ## CI/CD
 
-- **CI** - GitHub Actions runs the Jest suite on every push and pull request (see the badge above).
+- **CI** - GitHub Actions builds the app and runs the Jest suite on every push and pull request (see the badge above).
+- **E2E** - GitHub Actions also runs the Cypress end-to-end suite against a production build on every push and pull request (see the badge above).
 - **CD** - Deployment is handled automatically by Vercel, which builds and ships every push to `main`.
 
 

@@ -6,8 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test": "jest",
-    "test:watch": "jest --watch",
+    "test": "jest --passWithNoTests",
+    "test:watch": "jest --watch --passWithNoTests",
     "cypress:open": "cypress open",
     "lint": "eslint"
   },

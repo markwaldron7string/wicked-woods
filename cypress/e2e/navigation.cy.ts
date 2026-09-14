@@ -1,23 +1,28 @@
 describe('Navigation', () => {
-  beforeEach(() => {
+  it('navigates to the Services page from the home menu', () => {
     cy.visit('/')
-  })
-
-  it('navigates to the Services page', () => {
     cy.contains('nav a', 'Services').click()
     cy.url().should('include', '/services')
     cy.get('h1').should('be.visible')
   })
 
-  it('navigates to Meet the Horses', () => {
+  it('navigates to Meet the Horses from the home menu', () => {
+    cy.visit('/')
     cy.contains('nav a', 'Meet the Horses').click()
-    cy.url().should('include', '/horses')   // adjust if your route differs
+    cy.url().should('include', '/horses')
     cy.get('h1').should('be.visible')
   })
 
-  it('returns home from the Home link', () => {
-    cy.contains('nav a', 'Services').click()
+  it('shows the global navbar on inner pages, with Home returning to the home hub', () => {
+    cy.visit('/services')
     cy.contains('nav a', 'Home').click()
     cy.url().should('eq', Cypress.config().baseUrl + '/')
+  })
+
+  it('does not expose Our Story from the global navbar', () => {
+    cy.visit('/services')
+    cy.get('nav').first().within(() => {
+      cy.contains('a', 'Our Story').should('not.exist')
+    })
   })
 })
