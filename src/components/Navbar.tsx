@@ -4,10 +4,12 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import NavLogo from "@/components/NavLogo";
+import { useChrome } from "@/components/ChromeContext";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
+  const { navLinksVisible } = useChrome();
 
   const isActive = (path: string) => {
     const cleanPathname =
@@ -22,29 +24,31 @@ export default function Navbar() {
 
   const linkClass = (path: string) => {
     const active = isActive(path);
-    return `py-2 transition-all duration-200 hover:text-white ${
-      active
-        ? "text-white font-medium underline underline-offset-[6px] decoration-white/60"
-        : "text-white/75"
+    return `nav-link py-2 transition-colors duration-200 hover:text-white ${
+      active ? "is-active text-white font-medium" : "text-white/75"
     }`;
   };
 
-  const logoHref = pathname === "/" ? "/contact" : "/";
+  if (pathname === "/") return null;
 
   return (
     <nav className="absolute md:absolute top-0 left-0 w-full z-50 flex justify-center items-center px-6 md:px-10 py-2 text-white">
       {/* DESKTOP LOGO (≥1024px) */}
       <div className="absolute top-6 left-2 z-50 hidden lg:block">
-        <NavLogo href={logoHref} size="lg" />
+        <NavLogo href="/" size="lg" />
       </div>
 
       {/* MOBILE / TABLET LOGO (<1024px) */}
       <div className="absolute top-6 left-4 z-50 block lg:hidden">
-        <NavLogo href={logoHref} size="sm" />
+        <NavLogo href="/" size="sm" />
       </div>
 
       {/* DESKTOP NAV */}
-      <div className="space-x-8 text-sm tracking-wide hidden md:flex items-center">
+      <div
+        className={`space-x-8 text-sm tracking-wide hidden md:flex items-center transition-opacity duration-500 ${
+          navLinksVisible ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
+      >
         <Link href="/" className={linkClass("/")}>
           Home
         </Link>
@@ -71,7 +75,9 @@ export default function Navbar() {
       {/* HAMBURGER BUTTON */}
       <button
         onClick={() => setOpen(!open)}
-        className="md:hidden cursor-pointer fixed top-4 right-6 z-50 flex flex-col justify-center items-center w-8 h-8"
+        className={`md:hidden cursor-pointer fixed top-4 right-6 z-50 flex flex-col justify-center items-center w-8 h-8 transition-opacity duration-500 ${
+          navLinksVisible ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
       >
         <span
           className={`absolute h-0.5 w-6 bg-white transition-all duration-300 ${

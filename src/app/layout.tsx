@@ -1,5 +1,6 @@
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import { ChromeProvider } from "@/components/ChromeContext";
 import { Lato } from "next/font/google";
 
 const lato = Lato({
@@ -26,9 +27,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${lato.className} relative text-white bg-black`}>
-        <Navbar />
-        {children}
+      <body
+        className={`${lato.className} relative text-white bg-black`}
+        suppressHydrationWarning
+      >
+        <ChromeProvider>
+          <Navbar />
+          {children}
+        </ChromeProvider>
       </body>
     </html>
   );
