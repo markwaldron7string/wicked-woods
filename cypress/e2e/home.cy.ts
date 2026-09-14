@@ -1,6 +1,6 @@
-describe('Home page', () => {
+describe('Home hub page', () => {
   beforeEach(() => {
-    cy.visit('/')
+    cy.visit('/home')
   })
 
   it('shows a hero heading', () => {
@@ -43,9 +43,9 @@ describe('Home page', () => {
     cy.contains('The Wicked Woods Story').should('be.visible')
   })
 
-  it('has a subtle Replay Intro link pointing to /intro', () => {
+  it('has a subtle Replay Intro link pointing back to the site root', () => {
     cy.contains('a', 'Replay Intro')
       .should('be.visible')
-      .and('have.attr', 'href', '/intro')
+      .and('have.attr', 'href', '/')
   })
 })

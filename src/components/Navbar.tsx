@@ -11,16 +11,7 @@ export default function Navbar() {
   const pathname = usePathname();
   const { navLinksVisible } = useChrome();
 
-  const isActive = (path: string) => {
-    const cleanPathname =
-      pathname !== "/" ? pathname.replace(/\/$/, "") : pathname;
-
-    if (path === "/") {
-      return cleanPathname === "/";
-    }
-
-    return cleanPathname === path;
-  };
+  const isActive = (path: string) => pathname.replace(/\/$/, "") === path;
 
   const linkClass = (path: string) => {
     const active = isActive(path);
@@ -29,18 +20,18 @@ export default function Navbar() {
     }`;
   };
 
-  if (pathname === "/") return null;
+  if (pathname === "/home") return null;
 
   return (
     <nav className="absolute md:absolute top-0 left-0 w-full z-50 flex justify-center items-center px-6 md:px-10 py-2 text-white">
       {/* DESKTOP LOGO (≥1024px) */}
       <div className="absolute top-6 left-2 z-50 hidden lg:block">
-        <NavLogo href="/" size="lg" />
+        <NavLogo href="/home" size="lg" />
       </div>
 
       {/* MOBILE / TABLET LOGO (<1024px) */}
       <div className="absolute top-6 left-4 z-50 block lg:hidden">
-        <NavLogo href="/" size="sm" />
+        <NavLogo href="/home" size="sm" />
       </div>
 
       {/* DESKTOP NAV */}
@@ -49,7 +40,7 @@ export default function Navbar() {
           navLinksVisible ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
       >
-        <Link href="/" className={linkClass("/")}>
+        <Link href="/home" className={linkClass("/home")}>
           Home
         </Link>
         <Link href="/services" className={linkClass("/services")}>
@@ -103,7 +94,7 @@ export default function Navbar() {
         }`}
       >
         <div className="flex flex-col items-center py-6 space-y-4">
-          <Link href="/" className={`block ${linkClass("/")}`} onClick={() => setOpen(false)}>
+          <Link href="/home" className={`block ${linkClass("/home")}`} onClick={() => setOpen(false)}>
             Home
           </Link>
 

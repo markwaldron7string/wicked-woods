@@ -1,9 +1,12 @@
+"use client";
+
+import { useLayoutEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { Cormorant_Garamond } from "next/font/google";
 import localFont from "next/font/local";
-import FadeIn from "@/components/FadeIn";
-import SiteFooter from "@/components/SiteFooter";
+import { useChrome } from "@/components/ChromeContext";
 
 const amalfi = localFont({
   src: "../../public/fonts/AmalfiCoast.ttf",
@@ -15,74 +18,95 @@ const serif = Cormorant_Garamond({
   weight: ["300", "400"],
 });
 
-const links = [
-  { label: "Services", href: "/services" },
-  { label: "Contact", href: "/contact" },
-  { label: "Learning Opportunities", href: "/lessons" },
-  { label: "The Facility", href: "/facility" },
-  { label: "Meet the Horses", href: "/horses" },
-  { label: "Our Story", href: "/our-story" },
-  { label: "Gallery", href: "/gallery" },
-];
+export default function Intro() {
+  const { setNavLinksVisible } = useChrome();
 
-export default function Home() {
+  useLayoutEffect(() => {
+    setNavLinksVisible(false);
+    return () => setNavLinksVisible(true);
+  }, [setNavLinksVisible]);
+
   return (
-    <main className="relative min-h-dvh flex flex-col text-white overflow-hidden">
-      {/* WOODEN BACKGROUND */}
-      <div className="absolute inset-0 -z-10 overflow-hidden">
+    <main className="relative h-dvh w-full text-white overflow-hidden">
+      {/* FULL-BLEED BANNER */}
+      <motion.div
+        className="absolute inset-0"
+        initial={{ opacity: 0, scale: 1.04 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1.6, ease: "easeOut" }}
+      >
         <Image
-          src="/images/hero/woodsiding.jpg"
-          alt="background"
+          src="/images/hero/ww-banner.jpg"
+          alt="The Wicked Woods"
           fill
           priority
-          className="object-cover object-bottom scale-110 brightness-75"
+          className="object-cover object-top brightness-65 contrast-85 saturate-100"
         />
-        <div className="absolute top-0 left-0 w-full h-48 bg-linear-to-b from-black via-black/70 to-transparent" />
-      </div>
+        <div className="absolute inset-0 bg-[#2a1f14]/10" />
+        <div className="absolute inset-0 bg-linear-to-b from-black/40 via-transparent to-black/60" />
+      </motion.div>
 
-      <div className="flex-1 flex items-center justify-center px-6 py-32">
-        <FadeIn>
-          <div className="flex flex-col items-center text-center gap-12">
-            <div className="flex flex-col items-center gap-16 cursor-default">
-              <h1 className={`${amalfi.className} text-5xl md:text-7xl`}>
-                The Wicked Woods
-              </h1>
+      {/* TEXT */}
+      <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4 gap-10 cursor-default">
+        <div className="flex flex-col items-center gap-16">
+          <motion.h1
+            className={`${amalfi.className} text-5xl md:text-8xl`}
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
+          >
+            The Wicked Woods
+          </motion.h1>
 
-              <div className="flex items-center justify-center gap-4">
-                <div className="h-px w-16 bg-white/60" />
-                <p className={`${serif.className} text-[18px] tracking-[0.4em]`}>
-                  EQUESTRIAN CENTER
-                </p>
-                <div className="h-px w-16 bg-white/60" />
-              </div>
-            </div>
+          <motion.div
+            className="flex items-center justify-center gap-4"
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.8, ease: "easeOut" }}
+          >
+            <div className="h-px w-16 bg-white/60" />
+            <p className={`${serif.className} text-[20px] tracking-[0.4em]`}>
+              EQUESTRIAN CENTER
+            </p>
+            <div className="h-px w-16 bg-white/60" />
+          </motion.div>
+        </div>
 
-            <nav className="flex flex-col items-center gap-6 text-2xl md:text-3xl tracking-wide">
-              {links.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="glow-link py-1 text-white/85"
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </nav>
-          </div>
-        </FadeIn>
-      </div>
-
-      <div className="text-center pb-4">
-        <Link
-          href="/intro"
-          className="text-[11px] tracking-[0.3em] uppercase text-white/25 hover:text-white/60 transition-colors"
+        {/* ENTER SITE — appears ~2s in with a slow, looping glow that locks in place on hover */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{
+            opacity: 1,
+            y: 0,
+            boxShadow: [
+              "0 0 0px rgba(255,255,255,0.0)",
+              "0 0 18px rgba(255,255,255,0.55)",
+              "0 0 0px rgba(255,255,255,0.0)",
+            ],
+          }}
+          transition={{
+            opacity: { duration: 0.8, delay: 2, ease: "easeOut" },
+            y: { duration: 0.8, delay: 2, ease: "easeOut" },
+            boxShadow: {
+              duration: 2.5,
+              delay: 2.2,
+              repeat: Infinity,
+              ease: "easeInOut",
+            },
+          }}
+          whileHover={{
+            boxShadow: "0 0 18px rgba(255,255,255,0.55)",
+            transition: { duration: 0.4, ease: "easeOut" },
+          }}
+          className="mt-4 rounded-full"
         >
-          Replay Intro
-        </Link>
-      </div>
-
-      <div className="px-6 md:px-16">
-        <SiteFooter />
+          <Link
+            href="/home"
+            className="block cursor-pointer text-sm tracking-[0.3em] uppercase text-white/90 hover:text-white border border-white/40 hover:border-white/70 rounded-full px-8 py-3 transition-colors"
+          >
+            Enter Site
+          </Link>
+        </motion.div>
       </div>
     </main>
   );
