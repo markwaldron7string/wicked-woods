@@ -12,12 +12,6 @@ const horses = [
       "Sarge is youngest of the four boys. He's showing wonderful prospect with each ride and will be a great partner for our advanced-beginner to intermediate students.",
   },
   {
-    name: "Jeepers Creepers",
-    image: "/images/horses/jc.jpg",
-    description:
-      "Jeepers was an impulse purchase like no other. He was purchased from an auction website, site unseen, with no known history. Over the last few years he's come a long way from the muddy little pony who was scared of everyone. He totes our little girl around so pleasantly, and cannot wait to help other little equestrians learn to love horses.",
-  },
-  {
     name: "Goblin",
     image: "/images/horses/goblin.jpg",
     description:
@@ -57,7 +51,7 @@ export default function Horses() {
           className="mb-16"
         />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {horses.map((horse, index) => (
             <FadeIn key={horse.name} delay={index * 0.1}>
               <div className="flex flex-col items-center text-center">
