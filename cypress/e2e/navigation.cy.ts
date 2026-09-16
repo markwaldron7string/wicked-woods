@@ -19,10 +19,11 @@ describe('Navigation', () => {
     cy.url().should('eq', Cypress.config().baseUrl + '/home')
   })
 
-  it('does not expose Our Story from the global navbar', () => {
+  it('exposes Our Story from the global navbar', () => {
     cy.visit('/services')
     cy.get('nav').first().within(() => {
-      cy.contains('a', 'Our Story').should('not.exist')
+      cy.contains('a', 'Our Story').should('be.visible').click()
     })
+    cy.url().should('include', '/our-story')
   })
 })
