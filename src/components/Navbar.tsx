@@ -61,6 +61,9 @@ export default function Navbar() {
         <Link href="/gallery" className={linkClass("/gallery")}>
           Gallery
         </Link>
+        <Link href="/our-story" className={linkClass("/our-story")}>
+          Our Story
+        </Link>
       </div>
 
       {/* HAMBURGER BUTTON */}
@@ -120,6 +123,10 @@ export default function Navbar() {
 
           <Link href="/gallery" className={`block ${linkClass("/gallery")}`} onClick={() => setOpen(false)}>
             Gallery
+          </Link>
+
+          <Link href="/our-story" className={`block ${linkClass("/our-story")}`} onClick={() => setOpen(false)}>
+            Our Story
           </Link>
 
         </div>

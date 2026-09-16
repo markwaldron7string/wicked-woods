@@ -20,8 +20,8 @@ export default function OurStory() {
 
       <div className="flex-1 flex items-center px-6 md:px-16 pt-32 pb-20">
         <FadeIn>
-          <div className="max-w-5xl mx-auto w-full">
-            <div className="flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-10 items-start">
+          <div className="max-w-5xl lg:max-w-none mx-auto w-full">
+            <div className="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-[492px_1fr] gap-8 md:gap-10 items-start">
               {/* IMAGE CARD — horse on the trail, full image shown */}
               <div className="w-full backdrop-blur-md bg-black/30 rounded-xl p-4 shadow-lg shadow-black/30">
                 <div className="relative w-full aspect-3/4 overflow-hidden rounded-md">

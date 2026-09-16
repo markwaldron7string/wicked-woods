@@ -4,6 +4,7 @@ import { Cormorant_Garamond } from "next/font/google";
 import localFont from "next/font/local";
 import FadeIn from "@/components/FadeIn";
 import SiteFooter from "@/components/SiteFooter";
+import GlassCard from "@/components/GlassCard";
 
 const amalfi = localFont({
   src: "../../../public/fonts/AmalfiCoast.ttf",
@@ -57,17 +58,19 @@ export default function Home() {
               </div>
             </div>
 
-            <nav className="flex flex-col items-center gap-6 text-2xl md:text-3xl tracking-wide">
-              {links.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="glow-link py-1 text-white/85"
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </nav>
+            <GlassCard className="p-8 md:p-10 bg-black/30!">
+              <nav className="flex flex-col items-center gap-6 text-2xl md:text-3xl tracking-wide">
+                {links.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="glow-link py-1 text-white/85"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </nav>
+            </GlassCard>
           </div>
         </FadeIn>
       </div>

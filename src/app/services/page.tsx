@@ -3,6 +3,7 @@ import Link from "next/link";
 import WoodBackground from "@/components/WoodBackground";
 import PageHeader from "@/components/PageHeader";
 import SiteFooter from "@/components/SiteFooter";
+import GlassCard from "@/components/GlassCard";
 
 export default function Page() {
   return (
@@ -15,26 +16,30 @@ export default function Page() {
           subtitle="Full-care boarding in a thoughtfully managed, family-run equestrian center."
         />
 
-        <FadeIn delay={0.15}>
-          <div className="backdrop-blur-md bg-black/30 border border-white/10 rounded-2xl p-8 md:p-12 space-y-10">
-            <p className="text-white/80 leading-relaxed text-center max-w-3xl mx-auto">
-              The Wicked Woods is a full care boarding facility ideal for
-              multiple disciplines, retirees and semi-retirees, casual riders,
-              and the occasional competitor. Our arena has excellent footing,
-              is well maintained, and regularly assessed for drainage and
-              stability.
-            </p>
+        <div className="space-y-10">
+          <FadeIn delay={0.15}>
+            <GlassCard className="p-8 md:p-12 bg-black/30!">
+              <p className="text-white/80 leading-relaxed text-center max-w-3xl mx-auto text-lg">
+                The Wicked Woods is a full care boarding facility ideal for
+                multiple disciplines, retirees and semi-retirees, casual riders,
+                and the occasional competitor. Our arena has excellent footing,
+                is well maintained, and regularly assessed for drainage and
+                stability.
+              </p>
 
-            <div className="text-center">
-              <p className="text-2xl font-light text-white">$600</p>
-              <p className="text-white/70 mt-1">per month, full board</p>
-            </div>
+              <div className="text-center mt-10">
+                <p className="text-2xl font-light text-white">$600</p>
+                <p className="text-white/70 mt-1">per month, full board</p>
+              </div>
+            </GlassCard>
+          </FadeIn>
 
-            <div>
+          <FadeIn delay={0.25}>
+            <GlassCard className="p-8 md:p-12 bg-black/30!">
               <h2 className="text-2xl mb-6 font-light lg:text-center">
                 Your monthly board includes:
               </h2>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-6 text-white/80 text-sm leading-relaxed">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-6 text-white/80 text-base leading-relaxed">
                 <ul className="space-y-4 list-disc list-outside pl-5">
                   <li>
                     Customized feed plan to include:
@@ -79,9 +84,11 @@ export default function Page() {
                   <li>Trailer parking</li>
                 </ul>
               </div>
-            </div>
+            </GlassCard>
+          </FadeIn>
 
-            <div>
+          <FadeIn delay={0.35}>
+            <GlassCard className="p-8 md:p-12 bg-black/30!">
               <h2 className="text-2xl mb-8 font-light text-center">
                 Additional Services
               </h2>
@@ -111,9 +118,9 @@ export default function Page() {
                   <p>$15 per change (owner supplies materials)</p>
                 </div>
               </div>
-            </div>
-          </div>
-        </FadeIn>
+            </GlassCard>
+          </FadeIn>
+        </div>
 
         <SiteFooter />
       </div>
