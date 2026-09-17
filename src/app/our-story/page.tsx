@@ -29,7 +29,7 @@ export default function OurStory() {
                     src="/images/hero/path.jpg"
                     alt="Trail view"
                     fill
-                    className="object-cover transition-transform duration-700 ease-out hover:scale-[1.01]"
+                    className="object-cover transition-transform duration-300 ease-out hover:scale-[1.01]"
                   />
                 </div>
               </div>

@@ -53,14 +53,14 @@ export default function Horses() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {horses.map((horse, index) => (
-            <FadeIn key={horse.name} delay={index * 0.1}>
+            <FadeIn key={horse.name} delay={index * 0.06}>
               <div className="flex flex-col items-center text-center">
                 <div className="relative w-full h-64 mb-4 overflow-hidden rounded-lg">
                   <Image
                     src={horse.image}
                     alt={horse.name}
                     fill
-                    className="object-cover hover:scale-105 transition-transform duration-500"
+                    className="object-cover hover:scale-105 transition-transform duration-300"
                   />
                 </div>
 

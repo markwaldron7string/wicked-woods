@@ -36,7 +36,7 @@ export default function Navbar() {
 
       {/* DESKTOP NAV */}
       <div
-        className={`space-x-8 text-sm tracking-wide hidden md:flex items-center transition-opacity duration-500 ${
+        className={`space-x-8 text-sm tracking-wide hidden md:flex items-center transition-opacity duration-300 ${
           navLinksVisible ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
       >
@@ -69,7 +69,7 @@ export default function Navbar() {
       {/* HAMBURGER BUTTON */}
       <button
         onClick={() => setOpen(!open)}
-        className={`md:hidden cursor-pointer fixed top-4 right-6 z-50 flex flex-col justify-center items-center w-8 h-8 transition-opacity duration-500 ${
+        className={`md:hidden cursor-pointer fixed top-4 right-6 z-50 flex flex-col justify-center items-center w-8 h-8 transition-opacity duration-300 ${
           navLinksVisible ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
       >

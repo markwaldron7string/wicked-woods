@@ -68,7 +68,7 @@ export default function Lightbox({
           width={1600}
           height={1000}
           onLoad={() => setLoaded(true)}
-          className={`w-full h-auto rounded-lg transition-all duration-500 ${
+          className={`w-full h-auto rounded-lg transition-all duration-300 ${
             loaded ? "opacity-100 scale-100" : "opacity-0 scale-95"
           }`}
         />

@@ -92,17 +92,17 @@ export default function Page() {
               <h2 className="text-2xl mb-8 font-light text-center">
                 Additional Services
               </h2>
-              <div className="max-w-xl mx-auto space-y-6 text-white/80 text-sm text-center">
+              <div className="max-w-xl mx-auto space-y-6 text-white/80 text-base text-center">
                 <div>
                   <p className="font-medium text-white mb-1">Riding Lessons</p>
                   <p className="text-white/60">
-                    See{" "}
+                    (See{" "}
                     <Link href="/lessons">
                       <span className="text-white/60 hover:text-white/80 transition-colors">
                         Learning Opportunities
                       </span>
                     </Link>{" "}
-                    page
+                    page)
                   </p>
                 </div>
                 <div>

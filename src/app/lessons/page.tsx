@@ -31,7 +31,7 @@ export default function Lessons() {
                     src="/images/lessons/closeup.jpg"
                     alt="Riding Lessons"
                     fill
-                    className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                    className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
                 <h2 className="text-2xl md:text-3xl mb-4 font-light">
@@ -57,7 +57,7 @@ export default function Lessons() {
                     src="/images/lessons/littlelessons.jpg"
                     alt="Little Lessons"
                     fill
-                    className="object-cover object-[center_75%] transition-transform duration-500 group-hover:scale-105"
+                    className="object-cover object-[center_75%] transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
                 <h2 className="text-2xl md:text-3xl mb-4 font-light">

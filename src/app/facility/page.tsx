@@ -76,7 +76,7 @@ export default function Facility() {
                   alt={`Facility ${index + 1}`}
                   width={800}
                   height={600}
-                  className="masonry-img cursor-pointer transition-transform duration-700 ease-out hover:scale-[1.01]"
+                  className="masonry-img cursor-pointer"
                   onClick={() => setActiveIndex(index)}
                 />
               </FadeIn>
