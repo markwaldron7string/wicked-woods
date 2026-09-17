@@ -77,7 +77,7 @@ export default function Lightbox({
       {/* CLOSE */}
       <button
         onClick={onClose}
-        className="absolute top-6 right-6 text-white text-4xl z-20 cursor-pointer p-3 hover:scale-110 transition"
+        className="absolute top-6 right-6 text-white text-4xl z-20 cursor-pointer p-3 hover:scale-110 transition-transform duration-200 ease-out"
       >
         ✕
       </button>
@@ -85,7 +85,7 @@ export default function Lightbox({
       {/* LEFT */}
       <button
         onClick={onPrev}
-        className="absolute left-4 md:left-8 text-white text-5xl z-20 cursor-pointer p-6 hover:scale-125 transition"
+        className="absolute left-4 md:left-8 text-white text-5xl z-20 cursor-pointer p-6 hover:scale-125 transition-transform duration-200 ease-out"
       >
         ‹
       </button>
@@ -93,7 +93,7 @@ export default function Lightbox({
       {/* RIGHT */}
       <button
         onClick={onNext}
-        className="absolute right-4 md:right-8 text-white text-5xl z-20 cursor-pointer p-6 hover:scale-125 transition"
+        className="absolute right-4 md:right-8 text-white text-5xl z-20 cursor-pointer p-6 hover:scale-125 transition-transform duration-200 ease-out"
       >
         ›
       </button>

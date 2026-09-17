@@ -25,13 +25,13 @@ export default function Lessons() {
         <div className="grid md:grid-cols-2 gap-8 md:gap-12">
           <FadeIn delay={0.15}>
             <Link href="/contact" className="group block h-full">
-              <GlassCard className="p-6 md:p-8 h-full transition-transform duration-300 hover:scale-[1.01]">
+              <GlassCard className="p-6 md:p-8 h-full transition-transform duration-300 ease-out hover:scale-[1.01]">
                 <div className="relative w-full h-64 mb-6 overflow-hidden rounded-lg">
                   <Image
                     src="/images/lessons/closeup.jpg"
                     alt="Riding Lessons"
                     fill
-                    className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
+                    className="object-cover object-center transition-transform duration-300 ease-out group-hover:scale-105"
                   />
                 </div>
                 <h2 className="text-2xl md:text-3xl mb-4 font-light">
@@ -51,13 +51,13 @@ export default function Lessons() {
 
           <FadeIn delay={0.3}>
             <Link href="/contact" className="group block h-full">
-              <GlassCard className="p-6 md:p-8 h-full transition-transform duration-300 hover:scale-[1.01]">
+              <GlassCard className="p-6 md:p-8 h-full transition-transform duration-300 ease-out hover:scale-[1.01]">
                 <div className="relative w-full h-64 mb-6 overflow-hidden rounded-lg">
                   <Image
                     src="/images/lessons/littlelessons.jpg"
                     alt="Little Lessons"
                     fill
-                    className="object-cover object-[center_75%] transition-transform duration-300 group-hover:scale-105"
+                    className="object-cover object-[center_75%] transition-transform duration-300 ease-out group-hover:scale-105"
                   />
                 </div>
                 <h2 className="text-2xl md:text-3xl mb-4 font-light">

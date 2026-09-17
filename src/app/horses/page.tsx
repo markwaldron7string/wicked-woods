@@ -60,7 +60,7 @@ export default function Horses() {
                     src={horse.image}
                     alt={horse.name}
                     fill
-                    className="object-cover hover:scale-105 transition-transform duration-300"
+                    className="object-cover hover:scale-105 transition-transform duration-300 ease-out"
                   />
                 </div>
 

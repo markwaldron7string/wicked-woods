@@ -29,7 +29,7 @@ body {
   background: currentColor;
   transform: scaleX(0);
   transform-origin: center;
-  transition: transform 200ms ease;
+  transition: transform 200ms ease-out;
 }
 
 .nav-link:hover::after,
@@ -40,7 +40,7 @@ body {
 .glow-link {
   display: inline-block;
   font-weight: 400;
-  transition: text-shadow 200ms ease, transform 200ms ease, color 200ms ease;
+  transition: text-shadow 250ms ease-out, transform 250ms ease-out, color 250ms ease-out;
 }
 
 .glow-link:hover {
@@ -75,7 +75,7 @@ body {
   width: 100%;
   height: auto;
   border-radius: 0.75rem;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
 }
 
 .masonry-img:hover {
