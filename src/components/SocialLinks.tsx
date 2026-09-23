@@ -16,7 +16,7 @@ export default function SocialLinks() {
 
   return (
     <div
-      className={`fixed top-4 right-16 md:top-6 md:right-8 z-50 flex items-center gap-4 text-white/75 ${
+      className={`absolute top-4 right-16 md:top-6 md:right-8 z-50 flex items-center gap-4 text-white/75 ${
         mobileVisible ? "flex" : "hidden"
       } md:flex`}
     >

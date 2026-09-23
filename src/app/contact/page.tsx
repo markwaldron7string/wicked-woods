@@ -64,9 +64,8 @@ export default function Contact() {
         <FadeIn delay={0.15}>
           <GlassCard className="p-8 md:p-10">
             <div className="mb-8 pb-8 border-b border-white/15 text-center space-y-2">
-              <p className="text-white/90">Louisville, Ohio — by appointment</p>
-              <p className="text-white/60 text-sm">
-                We respond to messages within a few days.
+              <p className="text-white/60 text-md">
+                We will respond as soon as possible!
               </p>
             </div>
 
