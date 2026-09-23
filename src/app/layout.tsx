@@ -1,5 +1,6 @@
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import SocialLinks from "@/components/SocialLinks";
 import { ChromeProvider } from "@/components/ChromeContext";
 import { Lato } from "next/font/google";
 
@@ -33,6 +34,7 @@ export default function RootLayout({
       >
         <ChromeProvider>
           <Navbar />
+          <SocialLinks />
           {children}
         </ChromeProvider>
       </body>

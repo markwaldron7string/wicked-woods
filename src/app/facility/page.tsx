@@ -14,6 +14,15 @@ const facilityImages = [
   "/images/facility/facility3.jpeg",
   "/images/facility/facility4.jpeg",
   "/images/facility/facility5.jpeg",
+  "/images/facility/facility6.jpg",
+  "/images/facility/facility7.jpg",
+  "/images/facility/facility8.jpg",
+  "/images/facility/facility9.jpg",
+  "/images/facility/facility10.jpg",
+  "/images/facility/facility11.jpg",
+  "/images/facility/facility12.jpg",
+  "/images/facility/facility13.jpg",
+  "/images/facility/facility14.jpg",
 ];
 
 export default function Facility() {

@@ -5,6 +5,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import NavLogo from "@/components/NavLogo";
 import { useChrome } from "@/components/ChromeContext";
+import FacebookIcon from "@/components/icons/FacebookIcon";
+import InstagramIcon from "@/components/icons/InstagramIcon";
+import EnvelopeIcon from "@/components/icons/EnvelopeIcon";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -66,10 +69,19 @@ export default function Navbar() {
         </Link>
       </div>
 
+      {/* BACKDROP — blurs the rest of the page while the mobile menu is open */}
+      <div
+        onClick={() => setOpen(false)}
+        aria-hidden="true"
+        className={`md:hidden fixed inset-0 z-40 bg-black/50 backdrop-blur-md transition-opacity duration-300 ${
+          open ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
+      />
+
       {/* HAMBURGER BUTTON */}
       <button
         onClick={() => setOpen(!open)}
-        className={`md:hidden cursor-pointer fixed top-4 right-6 z-50 flex flex-col justify-center items-center w-8 h-8 transition-opacity duration-300 ${
+        className={`md:hidden cursor-pointer fixed top-4 right-6 z-60 flex flex-col justify-center items-center w-8 h-8 transition-opacity duration-300 ${
           navLinksVisible ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
       >
@@ -92,8 +104,8 @@ export default function Navbar() {
 
       {/* MOBILE DROPDOWN */}
       <div
-        className={`fixed top-0 left-0 w-full bg-black/40 backdrop-blur-sm transition-all duration-300 overflow-hidden ${
-          open ? "max-h-125 opacity-100" : "max-h-0 opacity-0"
+        className={`fixed top-0 left-0 w-full z-50 bg-black/40 backdrop-blur-sm transition-all duration-300 overflow-hidden ${
+          open ? "max-h-160 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
         <div className="flex flex-col items-center py-6 space-y-4">
@@ -129,6 +141,36 @@ export default function Navbar() {
             Our Story
           </Link>
 
+          <div className="flex items-center gap-6 pt-3 mt-1 border-t border-white/15">
+            <a
+              href="https://www.facebook.com/profile.php?id=100088086146913"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit our Facebook page"
+              onClick={() => setOpen(false)}
+              className="text-white/75 hover:text-white transition-colors duration-200"
+            >
+              <FacebookIcon className="w-6 h-6" />
+            </a>
+            <a
+              href="https://www.instagram.com/thefarmatwickedwoods/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit our Instagram page"
+              onClick={() => setOpen(false)}
+              className="text-white/75 hover:text-white transition-colors duration-200"
+            >
+              <InstagramIcon className="w-6 h-6" />
+            </a>
+            <Link
+              href="/contact"
+              aria-label="Go to the contact page"
+              onClick={() => setOpen(false)}
+              className="text-white/75 hover:text-white transition-colors duration-200"
+            >
+              <EnvelopeIcon className="w-6 h-6" />
+            </Link>
+          </div>
         </div>
       </div>
     </nav>
