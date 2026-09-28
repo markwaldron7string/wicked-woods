@@ -9,8 +9,8 @@ import PageHeader from "@/components/PageHeader";
 import SiteFooter from "@/components/SiteFooter";
 
 const galleryImages = [
-  ...Array.from({ length: 19 }, (_, i) => `/images/gallery/misc${i + 1}.jpg`),
-  ...[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 15, 16].map(
+  ...Array.from({ length: 20 }, (_, i) => `/images/gallery/misc${i + 1}.jpg`),
+  ...[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 15, 16, 17].map(
     (n) => `/images/gallery/farm${n}.jpg`,
   ),
 ];
